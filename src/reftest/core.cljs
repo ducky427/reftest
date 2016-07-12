@@ -14,7 +14,7 @@
     (reagent/create-class
      {:component-did-mount (fn [x] (js/console.log @dom-node))
       :component-will-unmount (fn [] (reset! dom-node nil))
-      :reagent-render (fn [x] [:h2 {:ref (fn [y] (reset! dom-node y))} "hello"])})))
+      :reagent-render (fn [] [:h2 {:ref (fn [y] (reset! dom-node y))} "hello"])})))
 
 (defn hello-world
   []
